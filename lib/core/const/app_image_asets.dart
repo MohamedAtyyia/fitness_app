@@ -1,0 +1,47 @@
+abstract class AppImageAssets {
+  static const String onboardingfires = 'assets/image/first_on_boarding.png';
+  static const String onboardingSecond = 'assets/image/second_on_boarding.png';
+  static const String onboardingThird = 'assets/image/third_on_boarding.png';
+  static const String onboardingFourth = 'assets/image/fourth_on_boarding.png';
+  static const String iconLogin = 'assets/image/icon_login.png';
+  static const String facebook = 'assets/image/face_book.png';
+  static const String google = 'assets/image/google.png';
+  static const String firstPartImage = 'assets/image/first_part_image.png';
+  static const String secondPartImage ='assets/image/second_part_image.png';
+  static const String fitnes ='assets/image/fitnes.png';
+  static const String shapeBody ='assets/image/shap_body.png';
+  static const String fitnesBanner ='assets/image/fitnes_banner.png';
+  static const String circle = 'assets/image/circle.png';
+  static const String kg = 'assets/image/kg.png';
+  static const String sleep = 'assets/image/sleep.png';
+  static const String home = 'assets/image/home.png';
+  static const String camera='assets/image/camera.png';
+  static const String credit='assets/image/credit.png';
+  static const String profile='assets/image/setting_Profile.png';
+  static const String dumple='assets/image/dumbel.png';
+  static const String secondLogo='assets/image/second_logo.png';
+  static const String excersise='assets/image/exersise.png';
+  static const String backtest='assets/image/back_test.png';
+  static const String legTest='assets/image/leg_test.png';
+
+  static const String nameUser='assets/image/name_user.png';
+  static const String weightUser = 'assets/image/weight_user.png';
+  static const String list ='assets/image/list.png';
+  static const String settings = 'assets/image/settings.png';
+  static const String logout = 'assets/image/log-out.png';
+  static const String email = 'assets/image/email.png';
+  static const String lock = 'assets/image/LockSimple.png';
+  static const String phone = 'assets/image/phone.png';
+  static const String gender = 'assets/image/GenderIntersex.png';
+  static const String person = 'assets/image/Person.png';
+  static const String notification = 'assets/image/notification.png';
+  static const String policy ='assets/image/policey.png';
+  static const String logog = 'assets/image/logo.png';
+  static const String about = 'assets/image/about.png';
+  static const String condations = 'assets/image/condations.png';
+  static const String privacy = 'assets/image/privacy.png';
+  static const String emotion ='assets/image/emotion.png';
+  static const String fitnesSettings='assets/image/fitnesSettings.png';
+  static const String dumbelSettins =  'assets/image/Barbell (1).png';
+  static const String ageUser =  'assets/image/User.png';
+}
