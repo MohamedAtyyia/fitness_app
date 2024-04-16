@@ -16,6 +16,8 @@ class WeightField extends StatelessWidget {
         children: [
            Expanded(
              child: CustomTextFolemFiled(
+                        inputType: TextInputType.number,
+
                 text: 'Your Weight',
                 prefixIcon: FontAwesomeIcons.weightScale,
                 onChanged: (String weight) {

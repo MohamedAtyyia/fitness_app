@@ -20,13 +20,13 @@ class CustomDrawer extends StatelessWidget {
         colorText: AppColor.whiTe,
         onTap: () {},
       ),
-      ItemDrawer(
-        icon: FontAwesomeIcons.userGroup,
-        title: 'Account',
-        colorIcon: AppColor.whiTe,
-        colorText: AppColor.whiTe,
-        onTap: () {},
-      ),
+      // ItemDrawer(
+      //   icon: FontAwesomeIcons.userGroup,
+      //   title: 'Account',
+      //   colorIcon: AppColor.whiTe,
+      //   colorText: AppColor.whiTe,
+      //   onTap: () {},
+      // ),
       ItemDrawer(
         isTrack: true,
         icon: FontAwesomeIcons.signal,

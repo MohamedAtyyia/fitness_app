@@ -13,13 +13,27 @@ class SettingScreen extends StatelessWidget {
       backgroundColor: AppColor.whiTe,
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(),
-          SliverToBoxAdapter(
-            child: Image.asset(
-              AppImageAssets.fitnesSettings,
-              height: 230,
+          SliverAppBar(
+            pinned: true,
+            expandedHeight: MediaQuery.of(context).size.height * .5,
+          
+          
+            flexibleSpace: FlexibleSpaceBar(
+              // expandedTitleScale: 0,
+              title: Image.asset(
+                AppImageAssets.fitnesSettings,
+                // height: 230,
+              ),
             ),
           ),
+
+          // SliverToBoxAdapter(
+
+          //   child: Image.asset(
+          //     AppImageAssets.fitnesSettings,
+          //     height: 230,
+          //   ),
+          // ),
           CardSetting()
         ],
       ),

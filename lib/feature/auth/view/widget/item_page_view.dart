@@ -7,8 +7,8 @@ import 'package:vitalvibe/core/style/style.dart';
 import 'package:vitalvibe/core/widget/text_info.dart';
 
 class ItemPageView extends StatelessWidget {
-  const ItemPageView({super.key});
-
+  const ItemPageView({super.key, required this.title});
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +30,7 @@ class ItemPageView extends StatelessWidget {
           ),
           16.hs,
           TextInfo(
-              title: 'Lose weight',
+              title: title,
               textStyle:
                Style.getStyle(color: AppColor.whiTe,
                  context: context, fontWeight: FontWeight.w600,
@@ -45,15 +45,6 @@ class ItemPageView extends StatelessWidget {
               thickness: 1,
             ),
           ),
-          TextInfo(
-              title:
-                  'I have over 20 lbs to lose. I want to drop all this fat and gain muscle mass',
-              textStyle:
-              
-               Style.getStyle(color: AppColor.whiTe,
-                 context: context, fontWeight: FontWeight.w400,
-                  fontsize: 14),
-              ),
         ],
       ),
     );

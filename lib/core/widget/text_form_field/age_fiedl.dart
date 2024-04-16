@@ -16,6 +16,7 @@ class AgeField extends StatelessWidget {
             ageController.text = age;
           },
           isPassword: false,
+          inputType: TextInputType.number,
           textEditingController: ageController),
     );
   }

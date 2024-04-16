@@ -12,6 +12,7 @@ class ShowCurrentKG extends StatelessWidget {
   Widget build(BuildContext context) {
     return             SliverToBoxAdapter(
               child: new CircularPercentIndicator(
+                
                 rotateLinearGradient: true,
                 radius: 80.0,
                 linearGradient: LinearGradient(colors: [

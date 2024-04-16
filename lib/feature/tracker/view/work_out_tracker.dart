@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vitalvibe/core/const/app_color.dart';
 import 'package:vitalvibe/feature/tracker/view/widget/show_all_tracker.dart';
 import 'package:vitalvibe/feature/tracker/view/widget/slivert_to_box_adapter_to_tracker.dart';
 
@@ -18,16 +17,10 @@ class WorkoutTrackerScreen extends StatelessWidget {
             child: SizedBox(height: 50),
           ),
           ShowAlltracker(),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: Expanded(
-            child: Container(
-              width: double.infinity,
-              color: AppColor.whiTe,
-            ),
-          ),)
+         
         ],
       ),
+ 
     ));
   }
 }

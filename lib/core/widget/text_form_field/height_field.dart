@@ -16,6 +16,8 @@ class HeigthField extends StatelessWidget {
         children: [
           Expanded(
             child: CustomTextFolemFiled(
+                        inputType: TextInputType.number,
+
               text: 'Your Height',
               prefixIcon: FontAwesomeIcons.arrowsUpDown,
               onChanged: (String height) {

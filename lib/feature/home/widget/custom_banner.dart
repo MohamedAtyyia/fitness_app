@@ -17,6 +17,7 @@ class CustomBanner extends StatelessWidget {
     SliverToBoxAdapter(
     child: CarouselSlider.builder(
         options: CarouselOptions(
+          
           autoPlay: true,
               height: 340,
           viewportFraction: 1.0, 

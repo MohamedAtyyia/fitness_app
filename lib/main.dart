@@ -1,10 +1,7 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vitalvibe/core/router/app_reoute.dart';
-import 'package:vitalvibe/feature/feadback/view/feadback_Screen.dart';
-import 'package:vitalvibe/feature/settings/view/settings_Screen.dart';
 import 'package:vitalvibe/feature/splash/view/splash_view.dart';
 
 Future<void> main() async {

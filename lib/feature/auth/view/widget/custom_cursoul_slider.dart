@@ -4,11 +4,14 @@ import 'package:vitalvibe/feature/auth/view/widget/item_page_view.dart';
 
 class CustomCursulSlider extends StatelessWidget {
   const CustomCursulSlider({super.key});
-
+  static final List<String> title = [ 'Lose weight',
+  "Gain weight"
+  
+  ];
   @override
   Widget build(BuildContext context) {
     return             CarouselSlider.builder(
-              itemCount: 6,
+              itemCount: 2,
               options: CarouselOptions(
                 scrollPhysics: BouncingScrollPhysics(),
                 enableInfiniteScroll :false,
@@ -16,7 +19,7 @@ class CustomCursulSlider extends StatelessWidget {
                 
                 enlargeCenterPage: true,
               ),
-              itemBuilder: ((context, index, realIndex) => ItemPageView()),
+              itemBuilder: ((context, index, realIndex) => ItemPageView(title: title[index],)),
             );
   }
 }
