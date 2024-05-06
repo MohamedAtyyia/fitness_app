@@ -12,14 +12,14 @@ class ItemFeedBack extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       margin: EdgeInsets.symmetric(vertical: 6),
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-      duration: Duration(seconds: 1),
+      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+      duration: Duration(milliseconds: 600),
       curve: Curves.easeInOutCubicEmphasized,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
               width: 1.2,
-              color: isClic == true ? Color(0xff00FF66) : AppColor.grey)),
+              color: isClic == true ?Color(0xff14B8A6) : AppColor.grey)),
       child: Row(
         children: [
           TextInfo(
@@ -35,7 +35,7 @@ class ItemFeedBack extends StatelessWidget {
                   duration: Duration(seconds: 1),
                   curve: Curves.easeInOutCubicEmphasized,
                   decoration: BoxDecoration(
-                      color: Color(0xff00FF66), shape: BoxShape.circle),
+                      color: Color(0xff14B8A6), shape: BoxShape.circle),
                   child: Icon(
                     FontAwesomeIcons.check,
                     color: AppColor.whiTe,

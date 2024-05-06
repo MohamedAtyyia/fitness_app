@@ -89,24 +89,40 @@ class _ItemDrawerState extends State<ItemDrawer> {
                 ? Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      _textinfo(
-                          'Workout Tracker',
-                          context,
-                          () {
-                            Navigator.pop(context);
-                            Navigator.of(context)
-                              .pushNamed(AppRouterName.workoutTrackerScreen);
-                          }),
-                      8.hs,
-                      _textinfo('Workout Schedule', context, () {}),
-                      8.hs,
-                      _textinfo('Sleep Tracker', context, () {}),
-                      8.hs,
-                      _textinfo('Sleep Schedule', context, () {}),
-                      8.hs,
-                      _textinfo('Part focus', context, (){
+                      _textinfo('Workout Tracker', context, () {
                         Navigator.pop(context);
-                        Navigator.of(context).pushNamed(AppRouterName.partFouces);
+                        Navigator.of(context)
+                            .pushNamed(AppRouterName.workoutTrackerScreen);
+                      }),
+                      8.hs,
+                      _textinfo('Workout Schedule', context, () {
+                        Navigator.pop(context);
+                        Navigator.of(context)
+                            .pushNamed(AppRouterName.workSchduel);
+                      }),
+                      8.hs,
+                      _textinfo('Sleep Tracker', context, () {
+                        Navigator.pop(context);
+                        Navigator.of(context)
+                            .pushNamed(AppRouterName.sleepTracker);
+                      }),
+                      8.hs,
+                      _textinfo('Sleep Schedule', context, () {
+                        Navigator.pop(context);
+                        Navigator.of(context)
+                            .pushNamed(AppRouterName.sleepSchedule);
+                      }),
+                      8.hs,
+                      _textinfo('Part focus', context, () {
+                        Navigator.pop(context);
+                        Navigator.of(context)
+                            .pushNamed(AppRouterName.partFouces);
+                      }),
+                      8.hs,
+                      _textinfo('Weekly Repot', context, () {
+                        Navigator.pop(context);
+                        Navigator.of(context)
+                            .pushNamed(AppRouterName.weeklyrepot);
                       }),
                     ],
                   )

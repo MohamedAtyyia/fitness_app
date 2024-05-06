@@ -1,7 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vitalvibe/core/extention/extention.dart';
 import 'package:vitalvibe/core/style/style.dart';
 
@@ -10,8 +9,9 @@ class CustomDroDownButton extends StatelessWidget {
     super.key,
     required this.items,
     this.selectedValue,
-    required this.onChanged,
+    required this.onChanged, required this.iconData,
   });
+  final IconData iconData;
 
   final List<String> items;
   final String? selectedValue;
@@ -28,7 +28,7 @@ class CustomDroDownButton extends StatelessWidget {
         child: DropdownButton2<String>(
           hint: Row(
             children: [
-              Icon(FontAwesomeIcons.userGroup,
+              Icon(iconData,
                   size: 17, color: Color(0xff7B6F72)),
               12.ws,
               Text(
@@ -46,7 +46,7 @@ class CustomDroDownButton extends StatelessWidget {
                   value: item,
                   child: Row(
                     children: [
-                      Icon(FontAwesomeIcons.userGroup,
+                      Icon(iconData,
                           size: 17, color: Color(0xff7B6F72)),
                       12.ws,
                       Text(item, style: 

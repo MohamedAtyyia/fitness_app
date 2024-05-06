@@ -7,8 +7,9 @@ import 'package:vitalvibe/core/style/style.dart';
 import 'package:vitalvibe/core/widget/text_info.dart';
 
 class ItemPageView extends StatelessWidget {
-  const ItemPageView({super.key, required this.title});
+  const ItemPageView({super.key, required this.title, required this.subTitle});
   final String title;
+  final String subTitle; 
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,6 +46,12 @@ class ItemPageView extends StatelessWidget {
               thickness: 1,
             ),
           ),
+           TextInfo(
+              title: subTitle,
+              textStyle:
+               Style.getStyle(color: AppColor.whiTe,
+                 context: context, fontWeight: FontWeight.w600,
+                  fontsize: 14),)
         ],
       ),
     );

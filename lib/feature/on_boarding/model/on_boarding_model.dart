@@ -5,5 +5,5 @@ class OnBoardingModel{
   final String subTitle;
   final int  numScreen;
 
- const  OnBoardingModel({required this.image, required this.title, required this.subTitle, required this.numScreen});
+ const  OnBoardingModel( {  required this.image, required this.title, required this.subTitle, required this.numScreen});
 }

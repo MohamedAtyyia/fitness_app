@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vitalvibe/core/const/app_color.dart';
 import 'package:vitalvibe/core/const/app_image_asets.dart';
@@ -14,20 +15,6 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<ItemDrawer> itemDrawer = [
       ItemDrawer(
-        icon: FontAwesomeIcons.house,
-        title: 'Home',
-        colorIcon: AppColor.whiTe,
-        colorText: AppColor.whiTe,
-        onTap: () {},
-      ),
-      // ItemDrawer(
-      //   icon: FontAwesomeIcons.userGroup,
-      //   title: 'Account',
-      //   colorIcon: AppColor.whiTe,
-      //   colorText: AppColor.whiTe,
-      //   onTap: () {},
-      // ),
-      ItemDrawer(
         isTrack: true,
         icon: FontAwesomeIcons.signal,
         title: 'Trackers',
@@ -39,21 +26,21 @@ class CustomDrawer extends StatelessWidget {
         icon: FontAwesomeIcons.creditCard,
         title: 'Community',
         colorIcon: AppColor.whiTe,
-        onTap: () {},
+        onTap: () =>
+            navigator(context: context, nameScreen: AppRouterName.comunity),
         colorText: AppColor.whiTe,
       ),
       ItemDrawer(
         icon: FontAwesomeIcons.star,
-        onTap: ()=>Navigator.of(context).pushNamed(AppRouterName.feedBack),
+        onTap: () =>
+            navigator(context: context, nameScreen: AppRouterName.feedBack),
         title: 'Feedback',
         colorIcon: AppColor.whiTe,
         colorText: AppColor.whiTe,
       ),
       ItemDrawer(
-        onTap: (){
-          Navigator.pop(context);
-          Navigator.of(context).pushNamed(AppRouterName.setting);
-        } ,
+        onTap: () =>
+            navigator(context: context, nameScreen: AppRouterName.setting),
         icon: Icons.settings,
         title: 'Setttings',
         colorIcon: AppColor.whiTe,
@@ -65,9 +52,14 @@ class CustomDrawer extends StatelessWidget {
       width: MediaQuery.sizeOf(context).width * .6,
       child: Container(
         child: Column(
+          
           children: [
-            Image.asset(AppImageAssets.secondLogo),
-            12.ws,
+          SizedBox(height: MediaQuery.sizeOf(context).height* .1),
+            Image.asset(AppImageAssets.newLogo,
+            width: 100,
+            height: 100,
+            ),
+            20.hs,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -100,5 +92,10 @@ class CustomDrawer extends StatelessWidget {
         ])),
       ),
     );
+  }
+
+  void navigator({required String nameScreen, required BuildContext context}) {
+    Navigator.pop(context);
+    Navigator.of(context).pushNamed(nameScreen);
   }
 }

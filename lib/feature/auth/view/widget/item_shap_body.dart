@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:vitalvibe/core/const/app_color.dart';
-import 'package:vitalvibe/core/const/app_image_asets.dart';
 import 'package:vitalvibe/core/router/app_reoute_name.dart';
 import 'package:vitalvibe/core/style/style.dart';
 import 'package:vitalvibe/core/widget/text_info.dart';
+import 'package:vitalvibe/feature/auth/view/body_shape_screen.dart';
 
 class ItemShapBody extends StatelessWidget {
-  const ItemShapBody({super.key});
-
+  const ItemShapBody({super.key, required this.bodyShapeModel});
+  final  BodyShapeModel bodyShapeModel;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -20,14 +20,17 @@ class ItemShapBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             TextInfo(
-                title: '3-4%',
+                title: bodyShapeModel.title,
                 textStyle: 
                 
                  Style.getStyle(color: AppColor.black,
                    context: context, fontWeight: FontWeight.w500,
                     fontsize: 12),
                ),
-            Image.asset(AppImageAssets.shapeBody)
+            Image.asset(bodyShapeModel.image,
+            width: 100,
+            height: 100,
+            )
           ],
         ),
         decoration: BoxDecoration(

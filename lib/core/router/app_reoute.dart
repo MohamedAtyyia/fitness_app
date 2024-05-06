@@ -2,11 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:vitalvibe/core/router/app_reoute_name.dart';
+import 'package:vitalvibe/feature/add_schdule/view/add_schedule.dart';
+import 'package:vitalvibe/feature/add_schdule/view/show_schedule.dart';
+import 'package:vitalvibe/feature/auth/view/activity_level.dart';
 import 'package:vitalvibe/feature/auth/view/body_shape_screen.dart';
 import 'package:vitalvibe/feature/auth/view/enter_data_screen.dart';
 import 'package:vitalvibe/feature/auth/view/goal_screen.dart';
 import 'package:vitalvibe/feature/auth/view/login_Screen.dart';
 import 'package:vitalvibe/feature/auth/view/sign_up_screen.dart';
+import 'package:vitalvibe/feature/community/view/comunity_Screen.dart';
 import 'package:vitalvibe/feature/feadback/view/feadback_Screen.dart';
 import 'package:vitalvibe/feature/home/home_Screen.dart';
 import 'package:vitalvibe/feature/notification/view/notification_screen.dart';
@@ -17,9 +21,13 @@ import 'package:vitalvibe/feature/part_fouces/view/part_fouces.dart';
 import 'package:vitalvibe/feature/settings/data/model/information_model.dart';
 import 'package:vitalvibe/feature/settings/view/about_screen.dart';
 import 'package:vitalvibe/feature/settings/view/settings_Screen.dart';
+import 'package:vitalvibe/feature/sleep/view/add_alarm.dart';
+import 'package:vitalvibe/feature/sleep/view/sleep_scheudle.dart';
+import 'package:vitalvibe/feature/sleep/view/sleep_tracker.dart';
 import 'package:vitalvibe/feature/splash/view/splash_view.dart';
 import 'package:vitalvibe/feature/tracker/view/detaiks_tracker.dart';
 import 'package:vitalvibe/feature/tracker/view/work_out_tracker.dart';
+import 'package:vitalvibe/feature/weekley_repot/view/weekly_repot.dart';
 
 class AppRouter {
   static Route? generatRouter(RouteSettings settings) {
@@ -59,10 +67,28 @@ class AppRouter {
         return SizeTransition5(SettingScreen());
       case AppRouterName.feedBack:
         return SizeTransition5(FeadBackScreen());
+      case AppRouterName.comunity:
+        return SizeTransition5(CommunityScreen());
 
       case AppRouterName.informationScreen:
-      final informationModel = settings.arguments as InformationModel;
-        return SizeTransition5(InformationAboutAppScreen(informationModel:informationModel));
+        final informationModel = settings.arguments as InformationModel;
+        return SizeTransition5(
+            InformationAboutAppScreen(informationModel: informationModel));
+      case AppRouterName.addSchduel:
+        return SizeTransition5(AddSchedule());
+      case AppRouterName.workSchduel:
+        return SizeTransition5(ShowSchedule());
+      case AppRouterName.sleepTracker:
+        return SizeTransition5(SleepTracker());
+      case AppRouterName.sleepSchedule:
+        return SizeTransition5(SleepSchedule());
+      case AppRouterName.addAlarm:
+        return SizeTransition5(AddAlarm());
+      case AppRouterName.activityLevel:
+        return SizeTransition5(ActivityLevel());
+      case AppRouterName.weeklyrepot:
+        return SizeTransition5(WeeklyRepot());
+
       default:
         return SizeTransition5(SplashView());
     }

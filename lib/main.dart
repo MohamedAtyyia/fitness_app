@@ -13,7 +13,7 @@ Future<void> main() async {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]); // تحديد توجيه الشاشة في الطريقة المفضلة لكل الشاشات في التطبيق
-runApp(
+  runApp(
     const VitalVibe(),
   );
 
@@ -26,7 +26,7 @@ runApp(
   //     builder: (context) => const VitalVibe(),
   //   ),
   // );
- }
+}
 
 class VitalVibe extends StatelessWidget {
   const VitalVibe({super.key});
@@ -34,24 +34,21 @@ class VitalVibe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-    
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: LayoutBuilder(
-        builder:(context,constraints) {
-          
-          // log(constraints.maxWidth.toString());
-          // log(constraints.maxHeight.toString());
-          return MaterialApp(
-            locale: Locale('en'),
+      child: LayoutBuilder(builder: (context, constraints) {
+        return MaterialApp(
+          locale: Locale('en'),
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRouter.generatRouter,
-        home:   SplashView(),
-        //  home: SettingScreen(),
+          // home: WeeklyRepot(),
+          home: SplashView(),
+
+          //  home: HomeScreen(),
           // home: WorkoutTrackerScreen(),
-              );}
-      ),
+        );
+      }),
     );
   }
 }

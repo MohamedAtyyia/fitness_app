@@ -11,32 +11,30 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: ListView(
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 22),
-              child: Column(
-                children: [
-                  50.hs,
-                  TextInfo(title: 'Hey there,', textStyle: Style.getStyle(color: AppColor.black,
-                   context: context, fontWeight: FontWeight.w700, fontsize: 16)),
-                  TextInfo(title: 'Welcome Back', textStyle:Style.getStyle(color: AppColor.black,
-                   context: context,
-                    fontWeight: FontWeight.w700, fontsize: 20) 
-                  //Style.style20
-                  ),
-                  20.hs,
-                  FormSignIn(),
-                  SectionAuthBySocialMedai(
-                    onTap: () => Navigator.pop(context),
-                      title: 'Already have an account? ', subTitle: 'Login')
-                ],
-              ),
-            )
-          ],
-        ),
+    return Scaffold(
+      body: ListView(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 22),
+            child: Column(
+              children: [
+                50.hs,
+                TextInfo(title: 'Hey there,', textStyle: Style.getStyle(color: AppColor.black,
+                 context: context, fontWeight: FontWeight.w700, fontsize: 16)),
+                TextInfo(title: 'Welcome Back', textStyle:Style.getStyle(color: AppColor.black,
+                 context: context,
+                  fontWeight: FontWeight.w700, fontsize: 20) 
+                //Style.style20
+                ),
+                20.hs,
+                FormSignIn(),
+                SectionAuthBySocialMedai(
+                  onTap: () => Navigator.pop(context),
+                    title: 'Already have an account? ', subTitle: 'Login')
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

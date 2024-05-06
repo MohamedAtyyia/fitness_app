@@ -7,20 +7,22 @@ class WorkoutTrackerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      backgroundColor: Color(0xff90CDF4),
-      body: CustomScrollView(
-        slivers: [
-          SliverToBoxAdaptertoTracker(),
-          SliverToBoxAdapter(
-            child: SizedBox(height: 50),
+    return Scaffold(
+          backgroundColor: Color(0xff90CDF4),
+          body: Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: CustomScrollView(
+                slivers: [
+                  SliverToBoxAdaptertoTracker(),
+                  SliverToBoxAdapter(
+                    child: SizedBox(height: 50),
+                  ),
+                  ShowAlltracker(),
+                 
+                ],
+            ),
           ),
-          ShowAlltracker(),
-         
-        ],
-      ),
- 
-    ));
+     
+        );
   }
 }

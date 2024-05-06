@@ -13,50 +13,54 @@ class EnterDataScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 22),
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(
-              child: Column(
-                children: [
-                  ShowImage(),
-                  TextInfo(
-                      title: 'Let’s complete your profile',
-                      textStyle: Style.getStyle(color: AppColor.black,
-                       context: context, fontWeight: FontWeight.w700,
+    return Scaffold(
+        body: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 22),
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: Column(
+              children: [
+                ShowImage(),
+                TextInfo(
+                    title: 'Let’s complete your profile',
+                    textStyle: Style.getStyle(
+                        color: AppColor.black,
+                        context: context,
+                        fontWeight: FontWeight.w700,
                         fontsize: 20)),
-                  TextInfo(
-                      title: 'It will help us to know more about you!',
-                      textStyle: Style.getStyle(color: Color(0xff7B6F72),
-                 context: context, fontWeight: FontWeight.w400,
-                  fontsize: 12),),
-                  FormEnterDataFromClient()
-                ],
-              ), 
-              
+                TextInfo(
+                  title: 'It will help us to know more about you!',
+                  textStyle: Style.getStyle(
+                      color: Color(0xff7B6F72),
+                      context: context,
+                      fontWeight: FontWeight.w400,
+                      fontsize: 12),
+                ),
+                FormEnterDataFromClient()
+              ],
             ),
- 
-            SliverFillRemaining(
-              hasScrollBody: false,
-              child: Column(children: [
-                Spacer(flex: 1,),
-                CustomBottom(title: 'Next', ontap: (){
-                  Navigator.of(context).pushNamed(AppRouterName.detrminGoal);
-                },suffixIcon: true ,)
-                ,12.hs
-
-              ],),
-            )
-          ],
-        ),
-      )
-      
-      
-
+          ),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Spacer(
+                  flex: 1,
+                ),
+                CustomBottom(
+                  title: 'Next',
+                  ontap: () {
+                    Navigator.of(context).pushNamed(AppRouterName.activityLevel);
+                  },
+                  suffixIcon: true,
+                ),
+                12.hs
+              ],
+            ),
+          )
+        ],
+      ),
     ));
   }
 }
-

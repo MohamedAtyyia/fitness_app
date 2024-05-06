@@ -18,7 +18,7 @@ class SplashView extends StatelessWidget {
           context,
           AppRouterName.onBoarding,
           arguments: OnBoardingModel(
-              image: AppImageAssets.onboardingfires,
+              image: AppImageAssets.onboarding1,
               title: 'Track Your Goal',
               subTitle:
                   'Don\'t worry if you have trouble determining your goals, We can help you determine your goals and track your goals',
@@ -26,50 +26,48 @@ class SplashView extends StatelessWidget {
           (route) => false);
     });
 
-    return SafeArea(
-      child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(color: Color(0xff90CDF4)),
-          width: double.infinity,
-          height: double.infinity,
-          child: SingleChildScrollView(
-              child: Column(
-            children: [
-              150.hs,
-              Image.asset(AppImageAssets.logog, width: 200.w, height: 178.h),
-              40.hs,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('I',
-                      style: Style.getStyle(
-                          color: AppColor.secondColor,
-                          context: context,
-                          fontWeight: FontWeight.w700,
-                          fontsize: 36)
-                      // style:   Style.style36.copyWith(color: AppColor.secondColor),
-                      ),
-                  Text('FIT',
-                      //  style:   Style.style36.copyWith(color: AppColor.secondColor),
-                      style: Style.getStyle(
-                          color: AppColor.whiTe,
-                          context: context,
-                          fontWeight: FontWeight.w700,
-                          fontsize: 36)
-                      // style: Style.getStyle36(context,fontsize:  36)
-                      ),
-                ],
-              ),
-              16.hs,
-              TextInfo(title: 'Everybody Can Train', textStyle: Style.getStyle(
-                          color: AppColor.whiTe,
-                          context: context,
-                          fontWeight: FontWeight.w700,
-                          fontsize: 18)),
-              50.hs,
-            ],
-          )),
-        ),
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(color: Color(0xff90CDF4)),
+        width: double.infinity,
+        height: double.infinity,
+        child: SingleChildScrollView(
+            child: Column(
+          children: [
+            150.hs,
+            Image.asset(AppImageAssets.newLogo, width: 200.w, height: 178.h),
+            40.hs,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('I',
+                    style: Style.getStyle(
+                        color: AppColor.secondColor,
+                        context: context,
+                        fontWeight: FontWeight.w700,
+                        fontsize: 36)
+                    // style:   Style.style36.copyWith(color: AppColor.secondColor),
+                    ),
+                Text('FIT',
+                    //  style:   Style.style36.copyWith(color: AppColor.secondColor),
+                    style: Style.getStyle(
+                        color: AppColor.whiTe,
+                        context: context,
+                        fontWeight: FontWeight.w700,
+                        fontsize: 36)
+                    // style: Style.getStyle36(context,fontsize:  36)
+                    ),
+              ],
+            ),
+            16.hs,
+            TextInfo(title: 'Everybody Can Train', textStyle: Style.getStyle(
+                        color: AppColor.whiTe,
+                        context: context,
+                        fontWeight: FontWeight.w700,
+                        fontsize: 18)),
+            50.hs,
+          ],
+        )),
       ),
     );
   }

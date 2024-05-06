@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vitalvibe/core/const/app_color.dart';
 import 'package:vitalvibe/core/const/app_image_asets.dart';
@@ -13,91 +15,98 @@ class OnboadrfirstScreen extends StatelessWidget {
   final OnBoardingModel onBoardingModel;
   @override
   Widget build(BuildContext context) {
-    print('i amin ');
-    return SafeArea(
-      child: Scaffold(
-        floatingActionButton: InkWell(
-          onTap: () {
-            if (onBoardingModel.numScreen == 1) {
-              Navigator.pushNamed(
-                context,
-                AppRouterName.onBoarding,
-                arguments: OnBoardingModel(
-                    image: AppImageAssets.onboardingSecond,
-                    title: 'Get Burn',
-                    subTitle:
-                        'Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever',
-                    numScreen: 2),
-              );
-            } else if (onBoardingModel.numScreen == 2) {
-              Navigator.pushNamed(
-                context,
-                AppRouterName.onBoarding,
-                arguments: OnBoardingModel(
-                    image: AppImageAssets.onboardingThird,
-                    title: 'Eat Well',
-                    subTitle:
-                        'Let\'s start a healthy lifestyle with us, we can determine your diet every day. healthy eating is fun',
-                    numScreen: 3),
-              );
-            } else if (onBoardingModel.numScreen == 3) {
-              Navigator.pushNamed(
-                context,
-                AppRouterName.onBoarding,
-                arguments: OnBoardingModel(
-                    image: AppImageAssets.onboardingFourth,
-                    title: 'Improve Sleep  Quality',
-                    subTitle:
-                        'Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning',
-                    numScreen: 4),
-              );
-            } else {
-              Navigator.of(context).pushNamed(AppRouterName.login);
-            }
-          },
-          child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
-            decoration: BoxDecoration(
-                shape: BoxShape.circle, color: AppColor.secondColor),
-            child: Icon(
-              FontAwesomeIcons.chevronRight,
-              color: AppColor.whiTe,
-              size: 20,
-            ),
+    return Scaffold(
+      floatingActionButton: InkWell(
+        onTap: () {
+          if (onBoardingModel.numScreen == 1) {
+            Navigator.pushNamed(
+              context,
+              AppRouterName.onBoarding,
+              arguments: OnBoardingModel(
+                  image: AppImageAssets.onboarding2,
+                  title: 'Get Burn',
+                  subTitle:
+                      'Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever',
+                  numScreen: 2),
+            );
+          } else if (onBoardingModel.numScreen == 2) {
+            Navigator.pushNamed(
+              context,
+              AppRouterName.onBoarding,
+              arguments: OnBoardingModel(
+                  image: AppImageAssets.onboarding3,
+                  title: 'Eat Well',
+                  subTitle:
+                      'Let\'s start a healthy lifestyle with us, we can determine your diet every day. healthy eating is fun',
+                  numScreen: 3),
+            );
+          }
+           else if (onBoardingModel.numScreen == 3) {
+            Navigator.pushNamed(
+              context,
+              AppRouterName.onBoarding,
+              arguments: OnBoardingModel(
+                  image: AppImageAssets.onboarding4,
+                  title: 'Improve Sleep  Quality',
+                  subTitle:
+                      'Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning',
+                  numScreen: 4),
+            );
+          }
+          else {
+            Navigator.of(context).pushNamed(AppRouterName.login);
+          }
+        },
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+          decoration: BoxDecoration(
+              shape: BoxShape.circle, color: AppColor.secondColor),
+          child: Icon(
+            FontAwesomeIcons.chevronRight,
+            color: AppColor.whiTe,
+            size: 20,
           ),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.asset(
-                  // width: double.infinity,
-                  // fit: BoxFit.fitWidth,
-                  onBoardingModel.image),
-              50.hs,
-              Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 22),
-                  child: TextInfo(
-                      title: onBoardingModel.title,
-                      textStyle://Style.style24
-                       Style.getStyle(
-                          color: AppColor.black,
-                          context: context,
-                          fontWeight: FontWeight.w700,
-                          fontsize: 24)
-
-                      // Style.style24
-                      )),
-              8.hs,
-              Padding(
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              onBoardingModel.image,
+              width: double.infinity,
+              fit: BoxFit.fitWidth,
+            ),
+            50.hs,
+            Padding(
                 padding: EdgeInsets.symmetric(horizontal: 22),
                 child: TextInfo(
-                    title: onBoardingModel.subTitle, textStyle: Style.getStyle(color: Color(0xffB6B4C2), context: context, fontWeight: FontWeight.w400, fontsize: 18)),
-              ),
-            ],
-          ),
+                    title: onBoardingModel.title,
+                    textStyle: //Style.style24
+                        Style.getStyle(
+                            color: AppColor.black,
+                            context: context,
+                            fontWeight: FontWeight.w700,
+                            fontsize: 24)
+
+                    // Style.style24
+                    )),
+            8.hs,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 22),
+              child: TextInfo(
+                  title: onBoardingModel.subTitle,
+                  textStyle: Style.getStyle(
+                      color: Color(0xffB6B4C2),
+                      context: context,
+                      fontWeight: FontWeight.w400,
+                      fontsize: 18)),
+            ),
+          ],
         ),
       ),
     );
   }
+
+
 }

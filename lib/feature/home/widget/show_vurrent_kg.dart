@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:vitalvibe/core/const/app_color.dart';
 import 'package:vitalvibe/core/const/app_image_asets.dart';
@@ -14,7 +15,7 @@ class ShowCurrentKG extends StatelessWidget {
               child: new CircularPercentIndicator(
                 
                 rotateLinearGradient: true,
-                radius: 80.0,
+                radius: 75.0.w,
                 linearGradient: LinearGradient(colors: [
                   Color(0xff4299E1).withOpacity(.5),
                   Color(0xff4299E1),
@@ -35,7 +36,7 @@ class ShowCurrentKG extends StatelessWidget {
                             color: AppColor.black,
                             context: context,
                             fontWeight: FontWeight.w400,
-                            fontsize: 20))
+                            fontsize: 17))
                   ],
                 ),
               ),

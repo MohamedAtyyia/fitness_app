@@ -13,29 +13,28 @@ class FeadBackScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-        child: ListView(
-          children: [
-            TextInfo(
-              title: 'Usage',
-              textStyle: Style.getStyle(
-                  color: AppColor.black,
-                  context: context,
-                  fontWeight: FontWeight.w600,
-                  fontsize: 18),
-            ),
-            8.hs,
-            FeedBackFollowApp(),
-            FeedBackFollowExercies(),
-            PermsionDetrminePlay(),
-            ShareFeedBack()
-          ],
+    return Scaffold(
+          body: Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+    child: ListView(
+      children: [
+        TextInfo(
+          title: 'Usage',
+          textStyle: Style.getStyle(
+              color: AppColor.black,
+              context: context,
+              fontWeight: FontWeight.w600,
+              fontsize: 18),
         ),
-      ),
-    ));
+        8.hs,
+        FeedBackFollowApp(),
+        FeedBackFollowExercies(),
+        PermsionDetrminePlay(),
+        ShareFeedBack()
+      ],
+    ),
+          ),
+        );
   }
 }
 

@@ -13,7 +13,7 @@ class ShowDataForNutrition extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 16),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
@@ -35,7 +35,7 @@ class ShowDataForNutrition extends StatelessWidget {
             showData(
               context: context,
               colo: Color(0xff47CACA),
-              title: '	0.35g',
+              title: '0.35g',
               subTitle: 'Fat',
             ),
           ],

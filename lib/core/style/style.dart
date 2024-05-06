@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vitalvibe/core/const/app_color.dart';
 
 abstract class Style {
   static TextStyle getStyle(

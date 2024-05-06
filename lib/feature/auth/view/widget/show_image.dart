@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:vitalvibe/core/const/app_image_asets.dart';
 
 class ShowImage extends StatelessWidget {
@@ -10,7 +11,10 @@ class ShowImage extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         Image.asset(AppImageAssets.firstPartImage),
-        Image.asset(AppImageAssets.secondPartImage),
+        Positioned(
+          right: 50,
+          left: 0,
+          child: Image.asset(AppImageAssets.secondPartImage)),
         
       ],
     );

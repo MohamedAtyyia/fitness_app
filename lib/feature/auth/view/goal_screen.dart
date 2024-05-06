@@ -12,49 +12,48 @@ class GoalScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30),
-        child: Column(
-          children: [
-            50.hs,
-            TextInfo(
-                title: 'What is your goal ?',
-                textStyle: Style.getStyle(
-                    color: AppColor.black,
-                    context: context,
-                    fontWeight: FontWeight.w600,
-                    fontsize: 20)),
-            16.hs,
-            TextInfo(
-              title: 'It will help us to choose a best',
-              textStyle: Style.getStyle(
-                  color: Color(0xff7B6F72),
-                  context: context,
-                  fontWeight: FontWeight.w400,
-                  fontsize: 12),
-            ),
-            TextInfo(
-              title: 'program for you',
-              textStyle: Style.getStyle(
-                  color: Color(0xff7B6F72),
-                  context: context,
-                  fontWeight: FontWeight.w400,
-                  fontsize: 12),
-            ),
-            16.hs,
-            CustomCursulSlider(),
-            Spacer(flex: 1),
-            CustomBottom(
-                title: 'Confirm',
-                ontap: () {
-                  Navigator.of(context).pushNamed(AppRouterName.shapeBody);
-                }),
-            30.hs,
-          ],
+    return Scaffold(
+          body: Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 30),
+    child: Column(
+      children: [
+        50.hs,
+        TextInfo(
+            title: 'What is your goal ?',
+            textStyle: Style.getStyle(
+                color: AppColor.black,
+                context: context,
+                fontWeight: FontWeight.w600,
+                fontsize: 20)),
+        16.hs,
+        TextInfo(
+          title: 'It will help us to choose a best',
+          textStyle: Style.getStyle(
+              color: Color(0xff7B6F72),
+              context: context,
+              fontWeight: FontWeight.w400,
+              fontsize: 12),
         ),
-      ),
-    ));
+        TextInfo(
+          title: 'program for you',
+          textStyle: Style.getStyle(
+              color: Color(0xff7B6F72),
+              context: context,
+              fontWeight: FontWeight.w400,
+              fontsize: 12),
+        ),
+        16.hs,
+        CustomCursulSlider(),
+        Spacer(flex: 1),
+        CustomBottom(
+            title: 'Confirm',
+            ontap: () {
+              Navigator.of(context).pushNamed(AppRouterName.shapeBody);
+            }),
+        30.hs,
+      ],
+    ),
+          ),
+        );
   }
 }

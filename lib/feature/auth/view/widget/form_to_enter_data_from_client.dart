@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:vitalvibe/core/widget/drop_down.dart/custom_drop_dow.dart';
 import 'package:vitalvibe/core/widget/text_form_field/age_fiedl.dart';
 import 'package:vitalvibe/core/widget/text_form_field/height_field.dart';
@@ -17,6 +18,7 @@ class _FormEnterDataFromClientState extends State<FormEnterDataFromClient> {
   late TextEditingController heightController;
   late TextEditingController ageController;
   String? gender;
+  String? activityLevel;
   @override
   void initState() {
     wightController = TextEditingController();
@@ -37,21 +39,20 @@ class _FormEnterDataFromClientState extends State<FormEnterDataFromClient> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomDroDownButton(items: ['Man','Woman'],
-        selectedValue: gender,
-         onChanged: (String? gender){
-          this.gender = gender;
-          setState(() {
-            
-          });
-         }),
+        CustomDroDownButton(
+            items: ['Man', 'Woman'],
+            iconData: FontAwesomeIcons.userGroup,
+            selectedValue: gender,
+            onChanged: (String? gender) {
+              this.gender = gender;
+              setState(() {});
+            }),
         AgeField(ageController: ageController),
         WeightField(wightController: wightController),
-       HeigthField(heightController: heightController,),
+        HeigthField(
+          heightController: heightController,
+        ),
       ],
     );
   }
 }
-
-
-

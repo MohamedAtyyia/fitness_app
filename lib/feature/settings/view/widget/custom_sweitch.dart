@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:vitalvibe/core/const/app_color.dart';
 
 class CustomSwitch extends StatefulWidget {
