@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vitalvibe/core/router/app_reoute.dart';
+import 'package:vitalvibe/feature/home/home_Screen.dart';
 import 'package:vitalvibe/feature/splash/view/splash_view.dart';
 
 Future<void> main() async {
@@ -43,9 +44,9 @@ class VitalVibe extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           onGenerateRoute: AppRouter.generatRouter,
           // home: WeeklyRepot(),
-          home: SplashView(),
+          // home: SplashView(),
 
-          //  home: HomeScreen(),
+           home: HomeScreen(),
           // home: WorkoutTrackerScreen(),
         );
       }),

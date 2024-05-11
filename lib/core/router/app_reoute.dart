@@ -10,6 +10,9 @@ import 'package:vitalvibe/feature/auth/view/enter_data_screen.dart';
 import 'package:vitalvibe/feature/auth/view/goal_screen.dart';
 import 'package:vitalvibe/feature/auth/view/login_Screen.dart';
 import 'package:vitalvibe/feature/auth/view/sign_up_screen.dart';
+import 'package:vitalvibe/feature/camera/view/comparsation.dart';
+import 'package:vitalvibe/feature/camera/view/details_camera.dart';
+import 'package:vitalvibe/feature/camera/view/result.dart';
 import 'package:vitalvibe/feature/community/view/comunity_Screen.dart';
 import 'package:vitalvibe/feature/feadback/view/feadback_Screen.dart';
 import 'package:vitalvibe/feature/home/home_Screen.dart';
@@ -88,6 +91,12 @@ class AppRouter {
         return SizeTransition5(ActivityLevel());
       case AppRouterName.weeklyrepot:
         return SizeTransition5(WeeklyRepot());
+      case AppRouterName.comparsation:
+        return SizeTransition5(Comparsation());
+      case AppRouterName.result:
+        return SizeTransition5(Result());
+      case AppRouterName.detailsCamera:
+        return SizeTransition5(DetailsCamera());
 
       default:
         return SizeTransition5(SplashView());

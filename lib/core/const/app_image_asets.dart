@@ -69,9 +69,27 @@ abstract class AppImageAssets {
   static const String leg = 'assets/image/image/leg.png';
   static const String leg2 = 'assets/image/image/leg2.png';
   static const String gul = 'assets/image/image/glutes.png';
-    static const String newLogo = 'assets/image/image/new_logo.png';
-    static const String onboarding1 = 'assets/image/onboarding1.png';
-    static const String onboarding2 = 'assets/image/onboarding2.png';
-    static const String onboarding3 = 'assets/image/onboarding3.png';
-    static const String onboarding4 = 'assets/image/0nboarding4.png';
+  static const String newLogo = 'assets/image/image/new_logo.png';
+  static const String onboarding1 = 'assets/image/onboarding1.png';
+  static const String onboarding2 = 'assets/image/onboarding2.png';
+  static const String onboarding3 = 'assets/image/onboarding3.png';
+  static const String onboarding4 = 'assets/image/0nboarding4.png';
+
+  static const String camera2 = 'assets/camera_iamge/Camera.png';
+  static const String calender = 'assets/camera_iamge/calender.png';
+  static const String image_Camera1 = 'assets/camera_iamge/image1.png';
+  static const String image_Camera2 = 'assets/camera_iamge/image2.png';
+  static const String image_Camera3 = 'assets/camera_iamge/image3.png';
+  static const String image_Camera4 = 'assets/camera_iamge/image4.png';
+  static const String image_Camera5 = 'assets/camera_iamge/image5.png';
+  static const String image_Camera6 = 'assets/camera_iamge/image6.png';
+  static const String image_Camera7 = 'assets/camera_iamge/image7.png';
+  static const String image_Camera8 = 'assets/camera_iamge/image8.png';
+  static const String bannar1 = 'assets/camera_iamge/Banner.png';
+
+  static const String photo1 = 'assets/camera_iamge/photo1.png';
+  static const String photo2 = 'assets/camera_iamge/photo2.png';
+  static const String photo3 = 'assets/camera_iamge/photo3.png';
+  static const String photo4 = 'assets/camera_iamge/photo4.png';
+  static const String cameraz = 'assets/camera_iamge/cameraz.png';
 }

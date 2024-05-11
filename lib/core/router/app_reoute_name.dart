@@ -25,4 +25,7 @@ abstract class AppRouterName {
   static const String addAlarm = '/addAlarm';
   static const String activityLevel = '/activityLevel';
   static const String weeklyrepot = '/weeklyrepot';
+  static const String comparsation = '/comparsation';
+  static const String result = '/result';
+  static const String detailsCamera = '/detailsCamera';
 }

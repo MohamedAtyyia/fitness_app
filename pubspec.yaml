@@ -44,6 +44,7 @@ flutter:
     - assets/image/
     - assets/svg/
     - assets/image/image/
+    - assets/camera_iamge/
   fonts:
     - family: 'Poppins'
       fonts:
